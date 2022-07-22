@@ -1,0 +1,20 @@
+<h5>Total Members of this Tribe <%= @characters.count %></h5>
+
+<% @characters.each do |character| %>
+<p><img src= <%=character.photo %>></p>
+<p>Name: <%= character.name %></p>
+<p>Affiliation: <%= character.affiliation %></p>
+
+  <p><% if character.allies.empty?  || character.allies.nil? %>
+    Allies: None
+  <% else %>
+    Allies: <%= character.allies.join(", ") %></p>
+  <%end%>
+
+  <p><% if character.enemies.empty? || character.enemies.nil? %>
+    Enemies: None
+  <% else %>
+    Enemies: <%= character.enemies.join(", ") %></p>
+  <% end %>
+
+<%end%>

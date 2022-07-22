@@ -17,5 +17,7 @@ RSpec.describe Airbender do
     expect(character.name).to eq("Chan (Fire Nation admiral)")
     expect(character.allies).to eq(["Ozai", "Jimar"])
     expect(character.photo).to eq("https://vignette.wikia.nocookie.net/avatar/images/a/a5/Circus_master.png/revision/latest?cb=20130706153819")
+    expect(character.affiliation).to eq("Fire Nation Navy")
+    expect(character.enemies).to eq(["Earth Kingdom"])
   end
 end
